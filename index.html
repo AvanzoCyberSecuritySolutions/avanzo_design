@@ -2,273 +2,252 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avanzo Designs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Avanzo Designs | Branding, Web and Print Design in Thrissur</title>
+    <meta name="description" content="Avanzo Designs, the creative division of Avanzo Cyber Security Solutions. Brand identities, websites, logos and product design from Thrissur, Kerala.">
+    <meta name="theme-color" content="#eceef3">
+    <script>try{var s=sessionStorage,d=document.documentElement;d.classList.add(s.getItem('avz-v')?'is-return':'is-first');if(s.getItem('avz-nav')){d.classList.add('nav-in');s.removeItem('avz-nav')}s.setItem('avz-v','1')}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fx.css">
 </head>
-<body>
-<!-- Mobile Navbar -->
-<div class="relative transition-all duration-300 ease-in-out md:hidden max-md:block">
-    <button id="menuToggle" class="fixed top-20 left-5 z-50 text-2xl text-gray-800 hover:text-gray-600 focus:outline-none">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="flex">
-        <div>
-            <img src="images/Logo-01.png" alt="Logo"  style="height: 50px; width: auto;">
-        </div>
-        <div class="flex justify-end items-center ">
-            
-        </div>
-    </div>
+<body data-scene="hero">
 
-
-    <!-- Side Menu -->
-    <div id="sideMenu" class="fixed top-0 -left-64 w-64 h-full bg-gray-800 text-white z-40 transition-all duration-300 ease-in-out pt-16">
-        <ul class="py-4">
-            <li class="px-6 py-3 hover:bg-gray-700 border-b border-gray-700">
-                <a href="#" class="block">Home</a>
-            </li>
-            <li class="px-6 py-3 hover:bg-gray-700 border-b border-gray-700">
-                <a href="./services.html" class="block">Services</a>
-            </li>
-            <li class="px-6 py-3 hover:bg-gray-700 border-b border-gray-700">
-                <a href="./our works.html" class="block">Our Work</a>
-            </li>
-            <li class="px-6 py-3 hover:bg-gray-700">
-                <a href="./contact.html" class="block">Contact</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Overlay -->
-    <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 opacity-0 invisible transition-opacity duration-300 ease-in-out"></div>
-</div>
-
-<!-- Desktop Navbar -->
-<div class="w-full bg-transparent z-50 fixed top-0 max-md:hidden">
-    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-        <!-- Logo -->
-        <div class="flex items-center">
-            <img src="images/Logo-01.png" alt="Logo" class="mr-2" style="height: 90px; width: auto;">
-        </div>
-
-        <!-- Nav Links -->
-        <div class="hidden md:flex shadow-md rounded-full space-x-10">
-            <a href="#" class="text-gray-800 hover:text-pink-600 font-medium">Home</a>
-            <a href="services.html" class="text-gray-800 hover:text-pink-600 font-medium">Services</a>
-            <a href="our works.html" class="text-gray-800 hover:text-pink-600 font-medium">Our Works</a>
-            <a href="contact.html" class="text-gray-800 hover:text-pink-600 font-medium">Contact</a>
-        </div>
-
+<div class="backdrop" aria-hidden="true"></div>
+<div class="night" aria-hidden="true"></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="curtain" aria-hidden="true"></div>
+<div class="loader" aria-hidden="true">
+    <div class="loader__box">
+        <img src="images/Logo-01.png" alt="">
+        <div class="loader__bar"><span></span></div>
     </div>
 </div>
 
-<!-- Script for mobile toggle -->
-<script>
-    const menuToggle = document.getElementById('menuToggle');
-    const sideMenu = document.getElementById('sideMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const body = document.body;
-
-    menuToggle.addEventListener('click', () => {
-        sideMenu.classList.toggle('left-0');
-        sideMenu.classList.toggle('-left-64');
-        menuOverlay.classList.toggle('opacity-0');
-        menuOverlay.classList.toggle('invisible');
-        menuOverlay.classList.toggle('visible');
-        menuOverlay.classList.toggle('opacity-50');
-        body.classList.toggle('overflow-hidden');
-
-        const icon = menuToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    });
-
-    menuOverlay.addEventListener('click', () => {
-        sideMenu.classList.remove('left-0');
-        sideMenu.classList.add('-left-64');
-        menuOverlay.classList.add('opacity-0', 'invisible');
-        menuOverlay.classList.remove('visible', 'opacity-50');
-        body.classList.remove('overflow-hidden');
-
-        const icon = menuToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    });
-</script>
-
-
-        
-        <!-- Hero Section -->
-<div class="relative h-screen bg-gray-100 flex">
-    <!-- Left Content -->
-    <div class="flex flex-col justify-center items-start px-6 md:px-16 lg:px-20 w-full md:w-1/2 bg-cover bg-bottom" style="background-image: url('images/pic\ 2.png'); background-position: bottom;">
-        <h1 class="text-4xl font-bold text-[#6d306c]">Avanzo</h1>
-        <h2 class="text-4xl font-bold text-[#98519f]">designs</h2><br><br>
-        <p class="text-black text-sm  mb-6">
-            Avanzo Designs, the creative division of Avanzo Cyber Security Solutions. With over 15 years of experience in the industry, we specialize in crafting innovative brand identities, websites, logos, and product designs that elevate our clients
-        </p>
-        <!-- <button class="bg-[#db5999] text-white px-6 py-3 rounded-full hover:bg-[#f05c98]">
-            Start Now
-        </button> -->
-    </div>
-
-    <!-- Right Image -->
-    <div 
-    class="hidden md:block flex-1 min-h-screen bg-cover bg-center"
-    style="background-image: url('images/pic\ 1.png'); width: 90%; position: absolute; right: 0; height: 100vh;">
-    </div>
+<header class="site-header">
+    <a href="index.html" class="brand" aria-label="Avanzo Designs home"><img src="images/Logo-01.png" alt="Avanzo Designs"></a>
+    <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="our%20works.html">Our Works</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn header-cta" data-magnetic="0.25">Get in touch <span class="btn__icon">→</span></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+        <a href="index.html">Home <small>01</small></a>
+        <a href="services.html">Services <small>02</small></a>
+        <a href="our%20works.html">Our Works <small>03</small></a>
+        <a href="contact.html">Contact <small>04</small></a>
+    </nav>
+    <div class="label">info@avanzosolutions.in &nbsp; +91 73561 11128</div>
 </div>
 
+<main>
+    <section class="hero">
+        <div class="hero__top">
+            <span class="label">Design division of Avanzo Cyber Security Solutions</span>
+            <span class="label">thrissur, kerala</span>
+        </div>
 
-        
+        <h1 class="display hero__title lines">
+            <span class="line"><span>we shape how</span></span>
+            <span class="line"><span>your <span class="mark">brand</span></span></span>
+            <span class="line"><span><span class="accent">is seen.</span></span></span>
+        </h1>
 
-    <!-- <div class="w-full h-[1000px] px-12 py-20 relative">
-    
-    <img class="absolute top-0 left-0 -z-10 w-full h-[1000px]" src="images/first page below design.jpg" alt="">
-      
-    
-  </div>  -->
-
-
-  <div class="relative min-h-screen bg-gradient-to-b from-pink-100 to-pink-200 overflow-hidden flex items-center justify-center">
-    <!-- Background Design -->
-    <div class="absolute inset-0">
-      <img
-        src="images/pic 3.png"
-        alt="Background Design"
-        class="w-full h-full object-cover opacity-30"
-      />
-    </div>
-  
-    <!-- Grid Container -->
-    <div class="grid grid-cols-2 max-md:grid-cols-1 gap-8 p-16 max-md:p-10 z-10 relative bg-cover bg-center" style="background-image: url(images/petals.png);">
-      <!-- Card 1 -->
-      <div class="flex flex-col items-start justify-center bg-[#af539c] rounded-2xl shadow-lg p-8 relative">
-        <h2 class="text-xl font-bold text-white">Who<br> We Are</h2>
-        <p class="text-white mt-4">
-            Avanzo Designs, the creative division of Avanzo Cyber Security Solutions. With over 15 years of experience in the industry, we specialize in crafting innovative brand identities, websites, logos, and product designs that elevate our clients
-        </p>
-        <div class="absolute inset-0 bg-purple-300 rounded-2xl -translate-x-2 -translate-y-2 -z-10"></div>
-      </div>
-  
-      <!-- Card 2 -->
-      <div class="flex flex-col items-start justify-center bg-[#e75c97] rounded-2xl shadow-lg p-8 relative">
-        <h2 class="text-xl font-bold text-white">What<br> We Do</h2>
-        <p class="text-white mt-4">
-            We specialize in creating innovative design solutions that bring brands to life. Our expertise spans a wide range of design services, including website developing, logo developing, product developing and other designs
-        </p>
-        <div class="absolute inset-0 bg-pink-300 rounded-2xl -translate-x-2 -translate-y-2 -z-10"></div>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="flex flex-col items-start justify-center bg-[#d0579a] rounded-2xl shadow-lg p-8 relative">
-        <h2 class="text-xl font-bold text-white">Our<br> Works</h2>
-        <p class="text-white mt-4">
-            We deliver innovative design solutions that drive results, having developed websites for our clients as well as providing brand and product development for numerous organizations. We craft cohesive brand experiences that resonate with audiences, and we're here to bring your design vision to life!
-        </p>
-        <div class="absolute inset-0 bg-pink-400 rounded-2xl -translate-x-2 -translate-y-2 -z-10"></div>
-      </div>
-  
-      <!-- Card 4 -->
-      <div class="flex flex-col items-start justify-center bg-[#9350a0] rounded-2xl shadow-lg p-8 relative">
-        <h2 class="text-xl font-bold text-white">Where <br>We Are</h2>
-        <p class="text-white mt-4">
-            Located in the heart of Kerala's cultural district, our office is nestled in a vibrant and inspiring environment. You can find us at NRA 89, Whitefield Puthurkara, Ayyanthol, Thrissur, Kerala. Our strategic location enables us to stay connected with our clients and partners across the region. We welcome you to visit us and explore how we can help bring your design vision to life!
-
-        <div class="absolute inset-0 bg-purple-400 rounded-2xl -translate-x-2 -translate-y-2 -z-10"></div>
-      </div>
-    </div>
-  </div>
-  
-  
-
-     
-           <!-- Clients -->
-        <div class="w-full h-[1000px] px-12 py-20 relative">
-        <h2 class="text-3xl text-white font-bold mb-20">Our Clients</h2>
-        <div class="w-full grid grid-cols-4 max-md:grid-cols-2 gap-8">
-            <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-                <a href="https://salabhanjika.com/" target="_blank">
-                    <img class="w-[200px]" src="images/01.jpg" alt="Logo">
-                </a>
+        <div class="hero__bottom">
+            <p class="lead">Logos, branding, websites and print for businesses in Kerala and beyond. We have been doing this for over 15 years as the design team of Avanzo Cyber Security Solutions.</p>
+            <div class="hero__ctas">
+                <a href="contact.html" class="btn" data-magnetic="0.25">Start a project <span class="btn__icon">→</span></a>
+                <a href="our%20works.html" class="btn btn--ghost" data-magnetic="0.25">Our work</a>
             </div>
-            <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-                <a href="https://saheliservices.in/" target="_blank">
-                    <img class="w-[200px]" src="images/sahali.webp" alt="Logo">
-                </a>
-            </div>
-             
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl z-20">
-            <img class="w-[200px]" src="images/03.jpg" alt="">
+            <div class="scroll-hint label"><span class="scroll-hint__line"></span>Scroll</div>
         </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <a href="https://avanzotrust.in/" target="_blank">
-            <img class="w-[200px]" src="images/1707545348291.jpeg" alt="">
-            </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <a href="https://avanzoacademy.in/" target="_blank">
-            <img class="w-[200px]" src="images/02.jpg" alt="">
-        </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <a href="https://avanzosolutions.in/" target="_blank">
-            <img class="w-[200px]" src="images/logo.png" alt="">
-        </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl z-20">
-            <a href="https://avanzo.in/" target="_blank">
-            <img class="w-[200px]" src="images/avanzo-cyber.avif" alt="">
-        </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <img class="w-[250px]" src="images/08.png" alt="">
-        </div>
-    </div>
-    <img class="absolute top-0 left-0 -z-10 w-full h-[1000px]" src="images/Footer Image.jpg" alt="">
-    <!-- Animated Scrolling Disclaimer Section -->
-    <section class="w-full  py-4 flex justify-center items-center animate-pulse overflow-hidden">
-        <div class="whitespace-nowrap overflow-hidden">
-          <p class="text-black font-bold text-xl md:text-8xl lg:text-xl  p-6 rounded-lg  animate-marquee">
-            Disclaimer: * We do not charge for hiring. *
-          </p>
-            </div>
-      </section>
-<style>
-@keyframes marquee {
-0% { transform: translateX(100%); }
-100% { transform: translateX(-100%); }
-}
-
-.animate-marquee {
-display: inline-block;
-white-space: nowrap;
-animation: marquee 10s linear infinite;
-}
-</style>
-
-</div>
-
-
-    
-    <!-- Copyrights -->
-    <div class="w-full px-12 flex items-center justify-between bg-primary h-16" style="background-color: #ab2096;">
-        <p class="text-lg max-md:hidden text-white text-center">A unit of AVANZO CYBER SECURITY SOLUTIONS PVT. LTD. | Designed by avanzodesign.in</p>
-        <p class="text-sm md:hidden text-white text-center">&copy; AVANZO All rights reserved</p>
-        <div class="flex gap-3">
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter text-white"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram text-white"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube text-white"></i></a>
-
-        </div>
-    </div> 
     </section>
-    
-      
-      </body>
+
+    <section class="journey" data-journey aria-label="How we work">
+        <div class="journey__sticky">
+            <div class="journey__cap" data-in="0.16" data-out="0.34"><span class="label">the idea</span><p>every brand starts<br>as an idea.</p></div>
+            <div class="journey__cap" data-in="0.36" data-out="0.54"><span class="label">logos &amp; identity</span><p>we give it<br>a shape,</p></div>
+            <div class="journey__cap" data-in="0.56" data-out="0.74"><span class="label">branding &amp; print</span><p>a look people<br>remember,</p></div>
+            <div class="journey__cap" data-in="0.76" data-out="0.94"><span class="label">websites &amp; social</span><p>and a place<br>to be <span class="accent">seen.</span></p></div>
+            <div class="journey__hud" aria-hidden="true">
+                <span class="journey__bar"><i></i></span>
+                <span class="label" style="color:inherit">keep scrolling</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="showcase" data-showcase>
+        <canvas class="showcase__canvas" aria-hidden="true"></canvas>
+        <div class="showcase__text">
+            <span class="label reveal">what we make</span>
+            <h2 class="display lines"><span class="line"><span>cards, screens</span></span><span class="line"><span class="soft">and print.</span></span></h2>
+            <p class="lead reveal">A brand lives in a lot of places: a business card in someone's wallet, a website on their phone, a poster on a wall. We design all of them so they feel like one brand.</p>
+            <ol class="showcase__list reveal">
+                <li><span>01</span>business cards</li>
+                <li><span>02</span>websites &amp; app screens</li>
+                <li><span>03</span>posters, flyers &amp; brochures</li>
+                <li><span>04</span>social media</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="statement">
+        <span class="label reveal">about us</span>
+        <p class="words" data-words>We are the design team at Avanzo Cyber Security Solutions. For over <span class="hl">15 years</span> we have been making logos, websites, brochures and brand identities for hospitals, academies, trusts and local businesses.</p>
+
+        <div class="trio">
+            <div class="trio__item reveal">
+                <span class="label">what we do</span>
+                <h3>branding, web and print</h3>
+                <p>Logos, websites, product design, social media posts and the rest of what a brand needs to look consistent.</p>
+            </div>
+            <div class="trio__item reveal">
+                <span class="label">our work</span>
+                <h3>made to fit each client</h3>
+                <p>From a medical centre website to an academy's branding, every project starts with who the client is and who they need to reach.</p>
+            </div>
+            <div class="trio__item reveal">
+                <span class="label">where we are</span>
+                <h3>ayyanthole, thrissur</h3>
+                <p>NRA 89, Whitefield, Puthurkkara. Drop in if you would like to talk about a project in person.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="dark band-round hs" data-hscroll>
+        <div class="hs__sticky">
+            <div class="hs__head">
+                <div>
+                    <span class="label">services</span>
+                    <h2 class="display" style="margin-top:14px">our services</h2>
+                </div>
+                <div class="hs__progress" aria-hidden="true"><span></span></div>
+            </div>
+            <div class="hs__track">
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>01</span><span>Identity</span></div>
+                    <div class="svc__art" style="--c1:#e0529c;--c2:#8e3f97"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg></div>
+                    <h3>Logo Design</h3>
+                    <p>A mark that suits your business and is easy to recognise.</p>
+                </a>
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>02</span><span>Identity</span></div>
+                    <div class="svc__art" style="--c1:#8e3f97;--c2:#ff8ec4;--x1:70%;--y1:25%;--x2:25%;--y2:80%"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></div>
+                    <h3>Branding Package</h3>
+                    <p>Logo, stationery, templates and brand guidelines that all match.</p>
+                </a>
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>03</span><span>Digital</span></div>
+                    <div class="svc__art" style="--c1:#6f5bff;--c2:#e0529c;--x1:25%;--y1:70%;--x2:80%;--y2:20%"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9l2 2-2 2M11 13h4"/></svg></div>
+                    <h3>UI / UX Design</h3>
+                    <p>Websites and app screens that are clear and simple to use.</p>
+                </a>
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>04</span><span>Digital</span></div>
+                    <div class="svc__art" style="--c1:#ff6fae;--c2:#5a2a8f;--x1:50%;--y1:20%;--x2:50%;--y2:90%"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.5" cy="7.5" r="0.8" fill="currentColor"/></svg></div>
+                    <h3>Social Media Posts</h3>
+                    <p>Posts for offers, events and announcements, in your brand style.</p>
+                </a>
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>05</span><span>Print</span></div>
+                    <div class="svc__art" style="--c1:#b45cc8;--c2:#ffb3d6;--x1:20%;--y1:20%;--x2:85%;--y2:60%"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></div>
+                    <h3>Company Profile</h3>
+                    <p>Your history, services and achievements in a well laid out profile.</p>
+                </a>
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>06</span><span>Print</span></div>
+                    <div class="svc__art" style="--c1:#e0529c;--c2:#3b2a6e;--x1:80%;--y1:80%;--x2:20%;--y2:20%"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path d="M4 5h7v14H4zM13 5h7v14h-7z"/></svg></div>
+                    <h3>Brochures &amp; Flyers</h3>
+                    <p>Printed pieces that get your message across quickly.</p>
+                </a>
+                <a href="services.html" class="svc" data-cursor="Explore">
+                    <div class="svc__top label"><span>07</span><span>Print</span></div>
+                    <div class="svc__art" style="--c1:#8e3f97;--c2:#e0529c;--x1:40%;--y1:60%;--x2:70%;--y2:30%"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path d="M3 5h18v10H3z"/><path d="M8 15v5M16 15v5"/></svg></div>
+                    <h3>Banners &amp; Cards</h3>
+                    <p>Large format banners and business cards that look sharp in print.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="dark band-round-b section" style="padding-top:0">
+        <div class="section__head" style="margin-bottom:0;padding-top:clamp(40px,6vw,80px);border-top:1px solid var(--line-dark)">
+            <p class="lead" style="color:var(--on-dark-2)">Nine services in total. See the full list with details on the services page.</p>
+            <a href="services.html" class="btn btn--light" data-magnetic="0.25">See all services <span class="btn__icon">→</span></a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section__head">
+            <div>
+                <span class="label reveal">clients</span>
+                <h2 class="display lines" style="margin-top:14px"><span class="line"><span>some of our</span></span><span class="line"><span>clients</span></span></h2>
+            </div>
+            <a href="our%20works.html" class="btn btn--ghost reveal" data-magnetic="0.25">View all work</a>
+        </div>
+        <div class="logos">
+            <a class="logo-tile reveal" href="https://salabhanjika.com/" target="_blank" rel="noopener" data-cursor="Visit"><span class="logo-tile__img"><img src="images/01.jpg" alt="Salabhanjika"></span><span class="logo-tile__meta"><b>Salabhanjika</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://saheliservices.in/" target="_blank" rel="noopener" data-cursor="Visit"><span class="logo-tile__img"><img src="images/sahali.webp" alt="Saheli Services"></span><span class="logo-tile__meta"><b>Saheli Services</b><span class="logo-tile__arrow">→</span></span></a>
+            <div class="logo-tile reveal"><span class="logo-tile__img"><img src="images/03.jpg" alt="Client logo"></span><span class="logo-tile__meta"><b>Client</b></span></div>
+            <a class="logo-tile reveal" href="https://avanzotrust.in/" target="_blank" rel="noopener" data-cursor="Visit"><span class="logo-tile__img"><img src="images/1707545348291.jpeg" alt="Avanzo Trust"></span><span class="logo-tile__meta"><b>Avanzo Trust</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://avanzoacademy.in/" target="_blank" rel="noopener" data-cursor="Visit"><span class="logo-tile__img"><img src="images/02.jpg" alt="Avanzo Academy"></span><span class="logo-tile__meta"><b>Avanzo Academy</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://avanzosolutions.in/" target="_blank" rel="noopener" data-cursor="Visit"><span class="logo-tile__img"><img src="images/logo.png" alt="Avanzo Solutions"></span><span class="logo-tile__meta"><b>Avanzo Solutions</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://avanzo.in/" target="_blank" rel="noopener" data-cursor="Visit"><span class="logo-tile__img"><img src="images/avanzo-cyber.avif" alt="Avanzo Cyber Security"></span><span class="logo-tile__meta"><b>Avanzo Cyber Security</b><span class="logo-tile__arrow">→</span></span></a>
+            <div class="logo-tile reveal"><span class="logo-tile__img"><img src="images/08.png" alt="Client logo"></span><span class="logo-tile__meta"><b>Client</b></span></div>
+        </div>
+    </section>
+
+    <section class="cta cta--vivid">
+        <span class="label reveal">contact</span>
+        <h2 class="display lines"><span class="line"><span>tell us about</span></span><span class="line"><span>your <span class="accent">project.</span></span></span></h2>
+        <a href="contact.html" class="btn btn--light cta__btn reveal" data-magnetic="0.35">Get in touch <span class="btn__icon">→</span></a>
+    </section>
+
+    <div class="notice"><b>Please note:</b> We do not charge for hiring.</div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <div>
+            <img src="images/Logo-01.png" alt="Avanzo Designs">
+            <p class="label" style="max-width:34ch;line-height:1.6">A unit of Avanzo Cyber Security Solutions Pvt. Ltd.</p>
+            <a href="mailto:info@avanzosolutions.in" class="footer-mail">info@avanzosolutions.in</a>
+        </div>
+        <div>
+            <h4 class="label">Navigate</h4>
+            <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="our%20works.html">Our Works</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+            <h4 class="label">Studio</h4>
+            <address>NRA-89, Whitefield, Puthurkkara,<br>Ayyanthole, Thrissur 680003</address>
+            <p style="margin:10px 0 0"><a href="tel:+917356111128">+91 73561 11128</a></p>
+        </div>
+        <div>
+            <h4 class="label">Follow</h4>
+            <div class="socials">
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; Avanzo. All rights reserved.</span>
+        <span>Designed by avanzodesign.in</span>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/fx.js"></script>
+</body>
 </html>

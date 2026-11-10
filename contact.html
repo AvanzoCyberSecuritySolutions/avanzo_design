@@ -2,110 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact | Avanzo Designs</title>
+    <meta name="description" content="Start a project with Avanzo Designs, Thrissur, Kerala.">
+    <meta name="theme-color" content="#eceef3">
+    <script>try{var s=sessionStorage,d=document.documentElement;d.classList.add(s.getItem('avz-v')?'is-return':'is-first');if(s.getItem('avz-nav')){d.classList.add('nav-in');s.removeItem('avz-nav')}s.setItem('avz-v','1')}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fx.css">
 </head>
-<body class="bg-gray-100">
+<body data-scene="side">
 
-    <!-- Contact Page Container -->
-    <div class="min-h-screen flex flex-col items-center justify-center">
-        <!-- Header -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-extrabold text-gray-800">Contact Us</h1>
-            <p class="text-gray-600 mt-2">We would love to hear from you! Please fill out the form below.</p>
+<div class="backdrop" aria-hidden="true"></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="curtain" aria-hidden="true"></div>
+<div class="loader" aria-hidden="true">
+    <div class="loader__box">
+        <img src="images/Logo-01.png" alt="">
+        <div class="loader__bar"><span></span></div>
+    </div>
+</div>
+
+<header class="site-header">
+    <a href="index.html" class="brand" aria-label="Avanzo Designs home"><img src="images/Logo-01.png" alt="Avanzo Designs"></a>
+    <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="our%20works.html">Our Works</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a href="mailto:info@avanzosolutions.in" class="btn header-cta" data-magnetic="0.25">Email us <span class="btn__icon">→</span></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+        <a href="index.html">Home <small>01</small></a>
+        <a href="services.html">Services <small>02</small></a>
+        <a href="our%20works.html">Our Works <small>03</small></a>
+        <a href="contact.html">Contact <small>04</small></a>
+    </nav>
+    <div class="label">info@avanzosolutions.in &nbsp; +91 73561 11128</div>
+</div>
+
+<main>
+    <section class="page-head">
+        <span class="label reveal">contact</span>
+        <h1 class="display lines">
+            <span class="line"><span>say</span></span>
+            <span class="line"><span><span class="accent">hello.</span></span></span>
+        </h1>
+        <div class="page-head__foot">
+            <p class="lead">Tell us a bit about your business and what you need, and we will get back to you. You can also call or visit the studio.</p>
+            <span class="label">thrissur <span data-clock>--:--</span></span>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact__info reveal">
+            <a href="mailto:info@avanzosolutions.in" class="contact__big">info@avanzosolutions.in</a>
+            <div class="contact__row"><span class="label">phone</span><a href="tel:+917356111128">+91 73561 11128</a></div>
+            <div class="contact__row"><span class="label">studio</span><span>NRA-89, Whitefield, Puthurkkara,<br>Ayyanthole, Thrissur 680003</span></div>
+            <div class="contact__row"><span class="label">follow</span>
+                <div class="socials">
+                    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
 
-        <!-- Contact Form Container -->
-        <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- Contact Information -->
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Contact Info</h2>
-                    <p class="text-gray-600 mb-4">
-                        Feel free to reach out to us using the form or the contact details below.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.828 14.828a4 4 0 010-5.656m-4.95-4.95a10.027 10.027 0 000 15.556M9 16.828a4 4 0 010-5.656" />
-                            </svg>
-                            <span>+91 73561 11128</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 3H4a2 2 0 00-1.997 2.884zM10 12l-7.926-3.963A1.992 1.992 0 002 9v6a2 2 0 002 2h12a2 2 0 002-2V9a1.992 1.992 0 00-.074-.963L10 12z" />
-                            </svg>
-                            <span>info@avanzosolutions.in</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 16.72l-5.62-3.72m0 0l-5.62 3.72m5.62-3.72v-7.44m5.62 3.72v7.44M3 6l9 6 9-6M3 18l9-6 9 6" />
-                            </svg>
-                            <span>
-                                NRA-89,Whitefield,Puthurkkara,<br>
-                                Ayyanthole,Thrissur,680003<br></span>
-                        </li>
-                    </ul>
-                </div>
+        <form class="form-card reveal" data-mail-form>
+            <h2>Send us a message</h2>
+            <div class="field">
+                <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+                <label for="name">Your name</label>
+            </div>
+            <div class="field">
+                <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                <label for="email">Your email</label>
+            </div>
+            <div class="field">
+                <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                <label for="message">Tell us about your project</label>
+            </div>
+            <button type="submit" class="btn" data-magnetic="0.2">Send message <span class="btn__icon">→</span></button>
+            <p class="form-note" aria-live="polite"></p>
+        </form>
+    </section>
 
-                <!-- Contact Form -->
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
-                    <form action="#" method="POST" class="space-y-6">
-                        <!-- Name -->
-                        <div>
-                            <label for="name" class="block text-gray-700 font-medium">Your Name</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                placeholder="Enter your name" 
-                                required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                            >
-                        </div>
-                        <!-- Email -->
-                        <div>
-                            <label for="email" class="block text-gray-700 font-medium">Your Email</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="Enter your email address" 
-                                required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                            >
-                        </div>
-                        <!-- Message -->
-                        <div>
-                            <label for="message" class="block text-gray-700 font-medium">Your Message</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="5" 
-                                placeholder="Write your message here..." 
-                                required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                            ></textarea>
-                        </div>
-                        <!-- Submit Button -->
-                        <div>
-                            <button 
-                                type="submit" 
-                                class="w-full bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                            >
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
+    <div class="notice"><b>Please note:</b> We do not charge for hiring.</div>
+</main>
 
+<footer class="site-footer">
+    <div class="footer-main">
+        <div>
+            <img src="images/Logo-01.png" alt="Avanzo Designs">
+            <p class="label" style="max-width:34ch;line-height:1.6">A unit of Avanzo Cyber Security Solutions Pvt. Ltd.</p>
+            <a href="mailto:info@avanzosolutions.in" class="footer-mail">info@avanzosolutions.in</a>
+        </div>
+        <div>
+            <h4 class="label">Navigate</h4>
+            <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="our%20works.html">Our Works</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+            <h4 class="label">Studio</h4>
+            <address>NRA-89, Whitefield, Puthurkkara,<br>Ayyanthole, Thrissur 680003</address>
+            <p style="margin:10px 0 0"><a href="tel:+917356111128">+91 73561 11128</a></p>
+        </div>
+        <div>
+            <h4 class="label">Follow</h4>
+            <div class="socials">
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
+    <div class="footer-bottom">
+        <span>&copy; Avanzo. All rights reserved.</span>
+        <span>Designed by avanzodesign.in</span>
+    </div>
+</footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/fx.js"></script>
 </body>
 </html>

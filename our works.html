@@ -2,82 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avanzo Designs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Our Work | Avanzo Designs</title>
+    <meta name="description" content="Selected websites and brand identities designed by Avanzo Designs.">
+    <meta name="theme-color" content="#eceef3">
+    <script>try{var s=sessionStorage,d=document.documentElement;d.classList.add(s.getItem('avz-v')?'is-return':'is-first');if(s.getItem('avz-nav')){d.classList.add('nav-in');s.removeItem('avz-nav')}s.setItem('avz-v','1')}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fx.css">
 </head>
-<body>
-    
-  
+<body data-scene="side">
 
-     
-           <!-- Clients -->
-        <div class="w-full h-[1000px] px-12 py-20 relative">
-        <h2 class="text-3xl text-white font-bold mb-20">Our Clients</h2>
-        <div class="w-full grid grid-cols-4 max-md:grid-cols-2 gap-8">
-            <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-                <a href="https://avanzoglobal.com/" target="_blank">
-                    <img class="w-[200px]" src="images/logopic.png" alt="Logo">
-                </a>
-            </div>
-            <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-                <a href="https://www.sunmedicalcentre.com/" target="_blank">
-                    <img class="w-[200px]" src="images/sun.jpg" alt="Logo">
-                </a>
-            </div>
-             
-            <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-                <a href="https://pattathildhanya.in/" target="_blank">
-                    <img class="w-[200px]" src="images/Dhanya Menon Signature.png" alt="Logo">
-                </a>
-            </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <a href="https://thirdeyecommunications.in/" target="_blank">
-            <img class="w-[200px]" src="images/logo (1).png" alt="">
-            </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <a href="https://nacsindia.org/" target="_blank">
-            <img class="w-[200px]" src="images/Final-Logo.png" alt="">
-        </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <a href="https://avanzosolutions.in/" target="_blank">
-            <img class="w-[200px]" src="images/logo.png" alt="">
-        </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl z-20">
-            <a href="https://avanzo.in/" target="_blank">
-            <img class="w-[200px]" src="images/avanzo-cyber.avif" alt="">
-        </a>
-        </div>
-        <div class="col-span-1 bg-white flex items-center justify-center py-2 rounded-xl">
-            <img class="w-[250px]" src="images/08.png" alt="">
-        </div>
+<div class="backdrop" aria-hidden="true"></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="curtain" aria-hidden="true"></div>
+<div class="loader" aria-hidden="true">
+    <div class="loader__box">
+        <img src="images/Logo-01.png" alt="">
+        <div class="loader__bar"><span></span></div>
     </div>
-    <img class="absolute top-0 left-0 -z-10 w-full h-[1000px]" src="images/Footer Image.jpg" alt="">
-
 </div>
 
+<header class="site-header">
+    <a href="index.html" class="brand" aria-label="Avanzo Designs home"><img src="images/Logo-01.png" alt="Avanzo Designs"></a>
+    <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="our%20works.html" aria-current="page">Our Works</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn header-cta" data-magnetic="0.25">Get in touch <span class="btn__icon">→</span></a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+        <a href="index.html">Home <small>01</small></a>
+        <a href="services.html">Services <small>02</small></a>
+        <a href="our%20works.html">Our Works <small>03</small></a>
+        <a href="contact.html">Contact <small>04</small></a>
+    </nav>
+    <div class="label">info@avanzosolutions.in &nbsp; +91 73561 11128</div>
+</div>
 
-    
-    <!-- Copyrights -->
-    <div class="w-full px-12 flex items-center justify-between bg-primary h-16" style="background-color: #ab2096;">
-        <p class="text-lg max-md:hidden text-white text-center">A unit of AVANZO CYBER SECURITY SOLUTIONS PVT. LTD. | Designed by avanzodesign.in</p>
-        <p class="text-sm md:hidden text-white text-center">&copy; AVANZO All rights reserved</p>
-        <div class="flex gap-3">
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter text-white"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram text-white"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube text-white"></i></a>
-
+<main>
+    <section class="page-head">
+        <span class="label reveal">our work</span>
+        <h1 class="display lines">
+            <span class="line"><span>our</span></span>
+            <span class="line"><span><span class="accent">work.</span></span></span>
+        </h1>
+        <div class="page-head__foot">
+            <p class="lead">A few of the websites and brands we have designed, for clients in healthcare, education, media and technology. Click a card to visit the live site.</p>
+            <span class="label">8 projects</span>
         </div>
-    </div> 
     </section>
-    
-      
-      </body>
+
+    <section class="section" style="padding-top:0">
+        <div class="logos">
+            <a class="logo-tile reveal" href="https://avanzoglobal.com/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/logopic.png" alt="Avanzo Global"></span><span class="logo-tile__meta"><b>Avanzo Global</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://www.sunmedicalcentre.com/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/sun.jpg" alt="Sun Medical Centre"></span><span class="logo-tile__meta"><b>Sun Medical Centre</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://pattathildhanya.in/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/Dhanya Menon Signature.png" alt="Dhanya Menon"></span><span class="logo-tile__meta"><b>Dhanya Menon</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://thirdeyecommunications.in/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/logo (1).png" alt="Third Eye Communications"></span><span class="logo-tile__meta"><b>Third Eye Communications</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://nacsindia.org/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/Final-Logo.png" alt="NACS India"></span><span class="logo-tile__meta"><b>NACS India</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://avanzosolutions.in/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/logo.png" alt="Avanzo Solutions"></span><span class="logo-tile__meta"><b>Avanzo Solutions</b><span class="logo-tile__arrow">→</span></span></a>
+            <a class="logo-tile reveal" href="https://avanzo.in/" target="_blank" rel="noopener" data-cursor="Visit site"><span class="logo-tile__img"><img src="images/avanzo-cyber.avif" alt="Avanzo Cyber Security"></span><span class="logo-tile__meta"><b>Avanzo Cyber Security</b><span class="logo-tile__arrow">→</span></span></a>
+            <div class="logo-tile reveal"><span class="logo-tile__img"><img src="images/08.png" alt="Client logo"></span><span class="logo-tile__meta"><b>Client</b></span></div>
+        </div>
+    </section>
+
+    <section class="cta cta--vivid">
+        <span class="label reveal">contact</span>
+        <h2 class="display lines"><span class="line"><span>want to work</span></span><span class="line"><span>with <span class="accent">us?</span></span></span></h2>
+        <a href="contact.html" class="btn btn--light cta__btn reveal" data-magnetic="0.35">Get in touch <span class="btn__icon">→</span></a>
+    </section>
+
+    <div class="notice"><b>Please note:</b> We do not charge for hiring.</div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <div>
+            <img src="images/Logo-01.png" alt="Avanzo Designs">
+            <p class="label" style="max-width:34ch;line-height:1.6">A unit of Avanzo Cyber Security Solutions Pvt. Ltd.</p>
+            <a href="mailto:info@avanzosolutions.in" class="footer-mail">info@avanzosolutions.in</a>
+        </div>
+        <div>
+            <h4 class="label">Navigate</h4>
+            <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="our%20works.html">Our Works</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+            <h4 class="label">Studio</h4>
+            <address>NRA-89, Whitefield, Puthurkkara,<br>Ayyanthole, Thrissur 680003</address>
+            <p style="margin:10px 0 0"><a href="tel:+917356111128">+91 73561 11128</a></p>
+        </div>
+        <div>
+            <h4 class="label">Follow</h4>
+            <div class="socials">
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; Avanzo. All rights reserved.</span>
+        <span>Designed by avanzodesign.in</span>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/fx.js"></script>
+</body>
 </html>
